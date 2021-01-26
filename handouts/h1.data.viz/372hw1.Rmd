@@ -30,7 +30,8 @@ library(dsbox)
 
 ## Excercises
 1. Create these figures using the data sets `mpg` or `diamonds` as needed:
-```{r, echo = FALSE}
+
+```{r, echo = FALSE, message=FALSE}
 ggplot(data = mpg) +
   labs(title ="First Cool BADM 372 Visualization") +
   geom_smooth(
@@ -40,7 +41,7 @@ ggplot(data = mpg) +
   )
 ```
 
-```{r,echo=FALSE}
+```{r,echo=FALSE, message=FALSE}
 ggplot(data = mpg, mapping = aes(x = displ, y = hwy, colour = drv)) +
   labs(title ="Second Cool BADM 372 Visualization") +
   geom_point() +
@@ -56,16 +57,16 @@ ggplot(data = diamonds) +
 
 ## Airbnb listings in Edinburgh
 
-Recent development in Edinburgh regarding the growth of Airbnb and its impact on the housing market means a better understanding of the Airbnb listings is needed. Using data provided by Airbnb, we can explore how Airbnb availability and prices vary by neighborhood.
+This data comes from the `dsbox` package.  Recent development in Edinburgh regarding the growth of Airbnb and its impact on the housing market means a better understanding of the Airbnb listings is needed. Using data provided by Airbnb, we can explore how Airbnb availability and prices vary by neighborhood.
 
 The data come from the [Kaggle database](https://www.kaggle.com/thoroc/edinburgh-inside-airbnb/version/2). It's 
 been modified to better serve the goals of this exploration.
 
-## Learning goals
+### Learning goals
 
 The goal of this assignment is not to conduct a thorough analysis of Airbnb listings in Edinburgh (yet?), but instead to give you a  chance to practice your workflow, data visualization, and interpretation skills.
 
-## Data 
+### Data 
 
 2. The dataset you'll be using is called `edibnb` the data is in the **dsbox** package. Run `View(edibnb)` in your Console to view the data in the data viewer. What does each row in the dataset represent?
 
@@ -94,7 +95,7 @@ You can find descriptions of each of the variables in the help file for the data
 **Note:** The plot will give a warning about some observations with non-finite values for price being removed. Don't worry about the warning, it simply means that 199 listings in the data didn't have prices available, so they can't be plotted.
 ```
 
-```{r eval=FALSE, echo=FALSE}
+```{r eval=FALSE, echo=TRUE}
 ggplot(data = ___, mapping = aes(x = ___)) +
   geom_histogram(binwidth = ___) +
   facet_wrap(~___)
@@ -125,6 +126,12 @@ The next dataset is about instructional staff employee hiring trends between 197
 The dataset is called `instructors`. You can find descriptions of each of the variables in the help file for the dataset, which you can access by running `?instructors` in your Console.
 
 The American Association of University Professors (AAUP) is a nonprofit membership association of faculty and other academic professionals. [This report](https://www.aaup.org/sites/default/files/files/AAUP_Report_InstrStaff-75-11_apr2013.pdf) compiled by the AAUP shows trends in instructional staff employees between 1975 and 2011, and contains an image very similar to the one given below.
+
+
+```{r, out.width = "50%", fig.pos="p", echo=FALSE, fig.align = "center"}
+knitr::include_graphics("img/aaup.png")
+```
+
 
 6. Recreate a graph similar to the one above.
 
