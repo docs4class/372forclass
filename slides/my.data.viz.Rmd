@@ -21,7 +21,7 @@ library(dsbox)
 - Each column is a **variable**
 
 
-```{r, out.width = "10%", fig.pos="p", echo=FALSE, fig.align = "center"}
+```{r, out.width = "10%", fig.pos="p", echo=TRUE, fig.align = "center"}
 starwars
 ```
 
@@ -214,6 +214,9 @@ ggplot(quartet, aes(x = x, y = y)) +
   facet_wrap(~ set, ncol = 4)
 ```
 
+## About Anscombe's quartet
+
+> Anscombe's quartet comprises four data sets that have nearly identical simple descriptive statistics, yet have very different distributions and appear very different when graphed. Each dataset consists of eleven (x,y) points. They were constructed in 1973 by the statistician Francis Anscombe to demonstrate both the importance of graphing data before analyzing it and the effect of outliers and other influential observations on statistical properties. He described the article as being intended to counter the impression among statisticians that "numerical calculations are exact, but graphs are *ROUGH*."
 
 
 ## Age at first kiss
